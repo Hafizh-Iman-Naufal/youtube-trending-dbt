@@ -143,6 +143,9 @@
   "profile": {
     "duplicate_grain_keys": 14518,
     "exact_duplicate_rows": 12570,
+    "loaded_rows": 375821,
+    "loader_row_skips": 121,
+    "loader_skips_note": "Phase 2 DuckDB loader uses ignore_errors=true and strict_mode=false; 121 source rows in JP/KR/MX/RU with malformed escape sequences are dropped. Tracked as known limitation.",
     "report": "docs/data-profile.md",
     "total_rows": 375942,
     "videos_in_multiple_regions": 66449
