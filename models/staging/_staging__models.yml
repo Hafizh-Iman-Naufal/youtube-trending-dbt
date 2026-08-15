@@ -1,0 +1,83 @@
+version: 2
+
+models:
+  - name: stg_youtube_video_observations
+    description: |
+      One row per (region_code, video_id, trending_date) trending observation.
+      Dedupes the 14,518 same-day re-pulls found in the source.
+      Casts source VARCHAR columns to typed columns.
+      Does NOT apply business logic (no engagement rates, no lifecycle).
+    columns:
+      - name: observation_key
+        description: Surrogate key from (region_code, video_id, trending_date).
+        tests:
+          - not_null
+          - unique
+      - name: region_code
+        description: Two-letter region code.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: video_id
+        description: YouTube video identifier (not globally unique).
+        tests: [not_null]
+      - name: trending_date
+        description: Raw `YY.DD.MM` source date.
+        tests: [not_null]
+      - name: trending_date_parsed
+        description: Parsed DATE. NULL if source format invalid.
+        tests: [not_null]
+      - name: title
+        description: Video title at observation.
+      - name: channel_title
+        description: Channel display name (NOT a stable channel key).
+      - name: category_id
+        description: Region-scoped category ID.
+        tests: [not_null]
+      - name: publish_time
+        description: Parsed UTC publication timestamp.
+      - name: views
+        description: Cumulative views (snapshot).
+        tests: [not_null]
+      - name: likes
+        description: Cumulative likes (snapshot).
+        tests: [not_null]
+      - name: dislikes
+        description: Cumulative dislikes (snapshot).
+        tests: [not_null]
+      - name: comment_count
+        description: Cumulative comment count (snapshot).
+        tests: [not_null]
+      - name: comments_disabled
+        description: Normalized boolean.
+      - name: ratings_disabled
+        description: Normalized boolean.
+      - name: video_error_or_removed
+        description: Normalized boolean.
+
+  - name: stg_youtube_categories
+    description: |
+      Flattened category metadata across all regions.
+      Joins to staging observations on (region_code, category_id).
+    columns:
+      - name: region_code
+        description: Two-letter region code.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: category_id
+        description: YouTube category ID (string).
+        tests: [not_null]
+      - name: category_title
+        description: Human-readable category name.
+      - name: category_channel_id
+        description: YouTube channel ID that owns the category.
+      - name: assignable
+        description: Whether the category is assignable to videos.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - region_code
+            - category_id

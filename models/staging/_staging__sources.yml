@@ -1,0 +1,711 @@
+version: 2
+sources:
+  - name: youtube_raw
+    description: |
+      Raw ingestion layer for the Kaggle `datasnaek/youtube-new` dataset.
+      Populated by `scripts/load_to_duckdb.py`. One table per region.
+      All measure columns are stored as VARCHAR (casts happen in staging).
+      Metadata columns (_source_region, _source_file, _loaded_at) do not
+      change analytical outputs.
+    schema: main
+    tables:
+      - name: raw_youtube_videos__CA
+        description: "Raw video observations for region CA."
+        columns:
+          - name: _source_region
+            description: Region code injected by the loader; matches filename stem.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+          - name: _source_file
+            description: Exact source CSV filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp. Measures ingestion freshness only.
+            tests: [not_null]
+          - name: video_id
+            description: YouTube video identifier. Repeated across regions/observations.
+            tests: [not_null]
+          - name: trending_date
+            description: Source date in `YY.DD.MM` form. Parsed in staging.
+            tests: [not_null]
+          - name: title
+            description: Video title at observation time.
+          - name: channel_title
+            description: Channel display name. NOT a stable channel key.
+          - name: category_id
+            description: Region-specific YouTube category ID.
+          - name: publish_time
+            description: Video publication timestamp (ISO 8601 UTC).
+          - name: tags
+            description: Pipe-delimited tag text. Preserved raw in staging.
+          - name: views
+            description: Cumulative views at observation (snapshot).
+          - name: likes
+            description: Cumulative likes at observation (snapshot).
+          - name: dislikes
+            description: Cumulative dislikes at observation (snapshot).
+          - name: comment_count
+            description: Cumulative comments at observation (snapshot).
+          - name: thumbnail_link
+            description: Thumbnail URL at observation.
+          - name: comments_disabled
+            description: Whether comments are disabled.
+          - name: ratings_disabled
+            description: Whether ratings are disabled.
+          - name: video_error_or_removed
+            description: Whether source reports error or removal.
+          - name: description
+            description: Video description (long text, nullable).
+      - name: raw_youtube_categories__CA
+        description: "Flat category metadata for region CA."
+        columns:
+          - name: _source_region
+            description: Region code.
+            tests: [not_null]
+          - name: _source_file
+            description: Source JSON filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp.
+            tests: [not_null]
+          - name: category_id
+            description: YouTube category ID.
+            tests: [not_null]
+          - name: category_title
+            description: Human-readable category name.
+          - name: category_channel_id
+            description: YouTube channel ID that owns the category.
+          - name: assignable
+            description: Whether the category is assignable to videos.
+      - name: raw_youtube_videos__DE
+        description: "Raw video observations for region DE."
+        columns:
+          - name: _source_region
+            description: Region code injected by the loader; matches filename stem.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+          - name: _source_file
+            description: Exact source CSV filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp. Measures ingestion freshness only.
+            tests: [not_null]
+          - name: video_id
+            description: YouTube video identifier. Repeated across regions/observations.
+            tests: [not_null]
+          - name: trending_date
+            description: Source date in `YY.DD.MM` form. Parsed in staging.
+            tests: [not_null]
+          - name: title
+            description: Video title at observation time.
+          - name: channel_title
+            description: Channel display name. NOT a stable channel key.
+          - name: category_id
+            description: Region-specific YouTube category ID.
+          - name: publish_time
+            description: Video publication timestamp (ISO 8601 UTC).
+          - name: tags
+            description: Pipe-delimited tag text. Preserved raw in staging.
+          - name: views
+            description: Cumulative views at observation (snapshot).
+          - name: likes
+            description: Cumulative likes at observation (snapshot).
+          - name: dislikes
+            description: Cumulative dislikes at observation (snapshot).
+          - name: comment_count
+            description: Cumulative comments at observation (snapshot).
+          - name: thumbnail_link
+            description: Thumbnail URL at observation.
+          - name: comments_disabled
+            description: Whether comments are disabled.
+          - name: ratings_disabled
+            description: Whether ratings are disabled.
+          - name: video_error_or_removed
+            description: Whether source reports error or removal.
+          - name: description
+            description: Video description (long text, nullable).
+      - name: raw_youtube_categories__DE
+        description: "Flat category metadata for region DE."
+        columns:
+          - name: _source_region
+            description: Region code.
+            tests: [not_null]
+          - name: _source_file
+            description: Source JSON filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp.
+            tests: [not_null]
+          - name: category_id
+            description: YouTube category ID.
+            tests: [not_null]
+          - name: category_title
+            description: Human-readable category name.
+          - name: category_channel_id
+            description: YouTube channel ID that owns the category.
+          - name: assignable
+            description: Whether the category is assignable to videos.
+      - name: raw_youtube_videos__FR
+        description: "Raw video observations for region FR."
+        columns:
+          - name: _source_region
+            description: Region code injected by the loader; matches filename stem.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+          - name: _source_file
+            description: Exact source CSV filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp. Measures ingestion freshness only.
+            tests: [not_null]
+          - name: video_id
+            description: YouTube video identifier. Repeated across regions/observations.
+            tests: [not_null]
+          - name: trending_date
+            description: Source date in `YY.DD.MM` form. Parsed in staging.
+            tests: [not_null]
+          - name: title
+            description: Video title at observation time.
+          - name: channel_title
+            description: Channel display name. NOT a stable channel key.
+          - name: category_id
+            description: Region-specific YouTube category ID.
+          - name: publish_time
+            description: Video publication timestamp (ISO 8601 UTC).
+          - name: tags
+            description: Pipe-delimited tag text. Preserved raw in staging.
+          - name: views
+            description: Cumulative views at observation (snapshot).
+          - name: likes
+            description: Cumulative likes at observation (snapshot).
+          - name: dislikes
+            description: Cumulative dislikes at observation (snapshot).
+          - name: comment_count
+            description: Cumulative comments at observation (snapshot).
+          - name: thumbnail_link
+            description: Thumbnail URL at observation.
+          - name: comments_disabled
+            description: Whether comments are disabled.
+          - name: ratings_disabled
+            description: Whether ratings are disabled.
+          - name: video_error_or_removed
+            description: Whether source reports error or removal.
+          - name: description
+            description: Video description (long text, nullable).
+      - name: raw_youtube_categories__FR
+        description: "Flat category metadata for region FR."
+        columns:
+          - name: _source_region
+            description: Region code.
+            tests: [not_null]
+          - name: _source_file
+            description: Source JSON filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp.
+            tests: [not_null]
+          - name: category_id
+            description: YouTube category ID.
+            tests: [not_null]
+          - name: category_title
+            description: Human-readable category name.
+          - name: category_channel_id
+            description: YouTube channel ID that owns the category.
+          - name: assignable
+            description: Whether the category is assignable to videos.
+      - name: raw_youtube_videos__GB
+        description: "Raw video observations for region GB."
+        columns:
+          - name: _source_region
+            description: Region code injected by the loader; matches filename stem.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+          - name: _source_file
+            description: Exact source CSV filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp. Measures ingestion freshness only.
+            tests: [not_null]
+          - name: video_id
+            description: YouTube video identifier. Repeated across regions/observations.
+            tests: [not_null]
+          - name: trending_date
+            description: Source date in `YY.DD.MM` form. Parsed in staging.
+            tests: [not_null]
+          - name: title
+            description: Video title at observation time.
+          - name: channel_title
+            description: Channel display name. NOT a stable channel key.
+          - name: category_id
+            description: Region-specific YouTube category ID.
+          - name: publish_time
+            description: Video publication timestamp (ISO 8601 UTC).
+          - name: tags
+            description: Pipe-delimited tag text. Preserved raw in staging.
+          - name: views
+            description: Cumulative views at observation (snapshot).
+          - name: likes
+            description: Cumulative likes at observation (snapshot).
+          - name: dislikes
+            description: Cumulative dislikes at observation (snapshot).
+          - name: comment_count
+            description: Cumulative comments at observation (snapshot).
+          - name: thumbnail_link
+            description: Thumbnail URL at observation.
+          - name: comments_disabled
+            description: Whether comments are disabled.
+          - name: ratings_disabled
+            description: Whether ratings are disabled.
+          - name: video_error_or_removed
+            description: Whether source reports error or removal.
+          - name: description
+            description: Video description (long text, nullable).
+      - name: raw_youtube_categories__GB
+        description: "Flat category metadata for region GB."
+        columns:
+          - name: _source_region
+            description: Region code.
+            tests: [not_null]
+          - name: _source_file
+            description: Source JSON filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp.
+            tests: [not_null]
+          - name: category_id
+            description: YouTube category ID.
+            tests: [not_null]
+          - name: category_title
+            description: Human-readable category name.
+          - name: category_channel_id
+            description: YouTube channel ID that owns the category.
+          - name: assignable
+            description: Whether the category is assignable to videos.
+      - name: raw_youtube_videos__IN
+        description: "Raw video observations for region IN."
+        columns:
+          - name: _source_region
+            description: Region code injected by the loader; matches filename stem.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+          - name: _source_file
+            description: Exact source CSV filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp. Measures ingestion freshness only.
+            tests: [not_null]
+          - name: video_id
+            description: YouTube video identifier. Repeated across regions/observations.
+            tests: [not_null]
+          - name: trending_date
+            description: Source date in `YY.DD.MM` form. Parsed in staging.
+            tests: [not_null]
+          - name: title
+            description: Video title at observation time.
+          - name: channel_title
+            description: Channel display name. NOT a stable channel key.
+          - name: category_id
+            description: Region-specific YouTube category ID.
+          - name: publish_time
+            description: Video publication timestamp (ISO 8601 UTC).
+          - name: tags
+            description: Pipe-delimited tag text. Preserved raw in staging.
+          - name: views
+            description: Cumulative views at observation (snapshot).
+          - name: likes
+            description: Cumulative likes at observation (snapshot).
+          - name: dislikes
+            description: Cumulative dislikes at observation (snapshot).
+          - name: comment_count
+            description: Cumulative comments at observation (snapshot).
+          - name: thumbnail_link
+            description: Thumbnail URL at observation.
+          - name: comments_disabled
+            description: Whether comments are disabled.
+          - name: ratings_disabled
+            description: Whether ratings are disabled.
+          - name: video_error_or_removed
+            description: Whether source reports error or removal.
+          - name: description
+            description: Video description (long text, nullable).
+      - name: raw_youtube_categories__IN
+        description: "Flat category metadata for region IN."
+        columns:
+          - name: _source_region
+            description: Region code.
+            tests: [not_null]
+          - name: _source_file
+            description: Source JSON filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp.
+            tests: [not_null]
+          - name: category_id
+            description: YouTube category ID.
+            tests: [not_null]
+          - name: category_title
+            description: Human-readable category name.
+          - name: category_channel_id
+            description: YouTube channel ID that owns the category.
+          - name: assignable
+            description: Whether the category is assignable to videos.
+      - name: raw_youtube_videos__JP
+        description: "Raw video observations for region JP."
+        columns:
+          - name: _source_region
+            description: Region code injected by the loader; matches filename stem.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+          - name: _source_file
+            description: Exact source CSV filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp. Measures ingestion freshness only.
+            tests: [not_null]
+          - name: video_id
+            description: YouTube video identifier. Repeated across regions/observations.
+            tests: [not_null]
+          - name: trending_date
+            description: Source date in `YY.DD.MM` form. Parsed in staging.
+            tests: [not_null]
+          - name: title
+            description: Video title at observation time.
+          - name: channel_title
+            description: Channel display name. NOT a stable channel key.
+          - name: category_id
+            description: Region-specific YouTube category ID.
+          - name: publish_time
+            description: Video publication timestamp (ISO 8601 UTC).
+          - name: tags
+            description: Pipe-delimited tag text. Preserved raw in staging.
+          - name: views
+            description: Cumulative views at observation (snapshot).
+          - name: likes
+            description: Cumulative likes at observation (snapshot).
+          - name: dislikes
+            description: Cumulative dislikes at observation (snapshot).
+          - name: comment_count
+            description: Cumulative comments at observation (snapshot).
+          - name: thumbnail_link
+            description: Thumbnail URL at observation.
+          - name: comments_disabled
+            description: Whether comments are disabled.
+          - name: ratings_disabled
+            description: Whether ratings are disabled.
+          - name: video_error_or_removed
+            description: Whether source reports error or removal.
+          - name: description
+            description: Video description (long text, nullable).
+      - name: raw_youtube_categories__JP
+        description: "Flat category metadata for region JP."
+        columns:
+          - name: _source_region
+            description: Region code.
+            tests: [not_null]
+          - name: _source_file
+            description: Source JSON filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp.
+            tests: [not_null]
+          - name: category_id
+            description: YouTube category ID.
+            tests: [not_null]
+          - name: category_title
+            description: Human-readable category name.
+          - name: category_channel_id
+            description: YouTube channel ID that owns the category.
+          - name: assignable
+            description: Whether the category is assignable to videos.
+      - name: raw_youtube_videos__KR
+        description: "Raw video observations for region KR."
+        columns:
+          - name: _source_region
+            description: Region code injected by the loader; matches filename stem.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+          - name: _source_file
+            description: Exact source CSV filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp. Measures ingestion freshness only.
+            tests: [not_null]
+          - name: video_id
+            description: YouTube video identifier. Repeated across regions/observations.
+            tests: [not_null]
+          - name: trending_date
+            description: Source date in `YY.DD.MM` form. Parsed in staging.
+            tests: [not_null]
+          - name: title
+            description: Video title at observation time.
+          - name: channel_title
+            description: Channel display name. NOT a stable channel key.
+          - name: category_id
+            description: Region-specific YouTube category ID.
+          - name: publish_time
+            description: Video publication timestamp (ISO 8601 UTC).
+          - name: tags
+            description: Pipe-delimited tag text. Preserved raw in staging.
+          - name: views
+            description: Cumulative views at observation (snapshot).
+          - name: likes
+            description: Cumulative likes at observation (snapshot).
+          - name: dislikes
+            description: Cumulative dislikes at observation (snapshot).
+          - name: comment_count
+            description: Cumulative comments at observation (snapshot).
+          - name: thumbnail_link
+            description: Thumbnail URL at observation.
+          - name: comments_disabled
+            description: Whether comments are disabled.
+          - name: ratings_disabled
+            description: Whether ratings are disabled.
+          - name: video_error_or_removed
+            description: Whether source reports error or removal.
+          - name: description
+            description: Video description (long text, nullable).
+      - name: raw_youtube_categories__KR
+        description: "Flat category metadata for region KR."
+        columns:
+          - name: _source_region
+            description: Region code.
+            tests: [not_null]
+          - name: _source_file
+            description: Source JSON filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp.
+            tests: [not_null]
+          - name: category_id
+            description: YouTube category ID.
+            tests: [not_null]
+          - name: category_title
+            description: Human-readable category name.
+          - name: category_channel_id
+            description: YouTube channel ID that owns the category.
+          - name: assignable
+            description: Whether the category is assignable to videos.
+      - name: raw_youtube_videos__MX
+        description: "Raw video observations for region MX."
+        columns:
+          - name: _source_region
+            description: Region code injected by the loader; matches filename stem.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+          - name: _source_file
+            description: Exact source CSV filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp. Measures ingestion freshness only.
+            tests: [not_null]
+          - name: video_id
+            description: YouTube video identifier. Repeated across regions/observations.
+            tests: [not_null]
+          - name: trending_date
+            description: Source date in `YY.DD.MM` form. Parsed in staging.
+            tests: [not_null]
+          - name: title
+            description: Video title at observation time.
+          - name: channel_title
+            description: Channel display name. NOT a stable channel key.
+          - name: category_id
+            description: Region-specific YouTube category ID.
+          - name: publish_time
+            description: Video publication timestamp (ISO 8601 UTC).
+          - name: tags
+            description: Pipe-delimited tag text. Preserved raw in staging.
+          - name: views
+            description: Cumulative views at observation (snapshot).
+          - name: likes
+            description: Cumulative likes at observation (snapshot).
+          - name: dislikes
+            description: Cumulative dislikes at observation (snapshot).
+          - name: comment_count
+            description: Cumulative comments at observation (snapshot).
+          - name: thumbnail_link
+            description: Thumbnail URL at observation.
+          - name: comments_disabled
+            description: Whether comments are disabled.
+          - name: ratings_disabled
+            description: Whether ratings are disabled.
+          - name: video_error_or_removed
+            description: Whether source reports error or removal.
+          - name: description
+            description: Video description (long text, nullable).
+      - name: raw_youtube_categories__MX
+        description: "Flat category metadata for region MX."
+        columns:
+          - name: _source_region
+            description: Region code.
+            tests: [not_null]
+          - name: _source_file
+            description: Source JSON filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp.
+            tests: [not_null]
+          - name: category_id
+            description: YouTube category ID.
+            tests: [not_null]
+          - name: category_title
+            description: Human-readable category name.
+          - name: category_channel_id
+            description: YouTube channel ID that owns the category.
+          - name: assignable
+            description: Whether the category is assignable to videos.
+      - name: raw_youtube_videos__RU
+        description: "Raw video observations for region RU."
+        columns:
+          - name: _source_region
+            description: Region code injected by the loader; matches filename stem.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+          - name: _source_file
+            description: Exact source CSV filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp. Measures ingestion freshness only.
+            tests: [not_null]
+          - name: video_id
+            description: YouTube video identifier. Repeated across regions/observations.
+            tests: [not_null]
+          - name: trending_date
+            description: Source date in `YY.DD.MM` form. Parsed in staging.
+            tests: [not_null]
+          - name: title
+            description: Video title at observation time.
+          - name: channel_title
+            description: Channel display name. NOT a stable channel key.
+          - name: category_id
+            description: Region-specific YouTube category ID.
+          - name: publish_time
+            description: Video publication timestamp (ISO 8601 UTC).
+          - name: tags
+            description: Pipe-delimited tag text. Preserved raw in staging.
+          - name: views
+            description: Cumulative views at observation (snapshot).
+          - name: likes
+            description: Cumulative likes at observation (snapshot).
+          - name: dislikes
+            description: Cumulative dislikes at observation (snapshot).
+          - name: comment_count
+            description: Cumulative comments at observation (snapshot).
+          - name: thumbnail_link
+            description: Thumbnail URL at observation.
+          - name: comments_disabled
+            description: Whether comments are disabled.
+          - name: ratings_disabled
+            description: Whether ratings are disabled.
+          - name: video_error_or_removed
+            description: Whether source reports error or removal.
+          - name: description
+            description: Video description (long text, nullable).
+      - name: raw_youtube_categories__RU
+        description: "Flat category metadata for region RU."
+        columns:
+          - name: _source_region
+            description: Region code.
+            tests: [not_null]
+          - name: _source_file
+            description: Source JSON filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp.
+            tests: [not_null]
+          - name: category_id
+            description: YouTube category ID.
+            tests: [not_null]
+          - name: category_title
+            description: Human-readable category name.
+          - name: category_channel_id
+            description: YouTube channel ID that owns the category.
+          - name: assignable
+            description: Whether the category is assignable to videos.
+      - name: raw_youtube_videos__US
+        description: "Raw video observations for region US."
+        columns:
+          - name: _source_region
+            description: Region code injected by the loader; matches filename stem.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+          - name: _source_file
+            description: Exact source CSV filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp. Measures ingestion freshness only.
+            tests: [not_null]
+          - name: video_id
+            description: YouTube video identifier. Repeated across regions/observations.
+            tests: [not_null]
+          - name: trending_date
+            description: Source date in `YY.DD.MM` form. Parsed in staging.
+            tests: [not_null]
+          - name: title
+            description: Video title at observation time.
+          - name: channel_title
+            description: Channel display name. NOT a stable channel key.
+          - name: category_id
+            description: Region-specific YouTube category ID.
+          - name: publish_time
+            description: Video publication timestamp (ISO 8601 UTC).
+          - name: tags
+            description: Pipe-delimited tag text. Preserved raw in staging.
+          - name: views
+            description: Cumulative views at observation (snapshot).
+          - name: likes
+            description: Cumulative likes at observation (snapshot).
+          - name: dislikes
+            description: Cumulative dislikes at observation (snapshot).
+          - name: comment_count
+            description: Cumulative comments at observation (snapshot).
+          - name: thumbnail_link
+            description: Thumbnail URL at observation.
+          - name: comments_disabled
+            description: Whether comments are disabled.
+          - name: ratings_disabled
+            description: Whether ratings are disabled.
+          - name: video_error_or_removed
+            description: Whether source reports error or removal.
+          - name: description
+            description: Video description (long text, nullable).
+      - name: raw_youtube_categories__US
+        description: "Flat category metadata for region US."
+        columns:
+          - name: _source_region
+            description: Region code.
+            tests: [not_null]
+          - name: _source_file
+            description: Source JSON filename.
+            tests: [not_null]
+          - name: _loaded_at
+            description: Local ingestion timestamp.
+            tests: [not_null]
+          - name: category_id
+            description: YouTube category ID.
+            tests: [not_null]
+          - name: category_title
+            description: Human-readable category name.
+          - name: category_channel_id
+            description: YouTube channel ID that owns the category.
+          - name: assignable
+            description: Whether the category is assignable to videos.
