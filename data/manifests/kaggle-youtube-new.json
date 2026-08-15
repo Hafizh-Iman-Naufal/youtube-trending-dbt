@@ -1,0 +1,162 @@
+{
+  "downloaded": {
+    "archive": {
+      "name": "trending_youtube_video_stats.zip",
+      "sha256": "9f59324bd23ebd95aa16f854de1e0a6299bacf988b30c5e7db5f1e4216d8deda",
+      "size_bytes": 210575746
+    },
+    "extracted_at_utc": "2026-08-15T14:44:14+00:00",
+    "extracted_to": "/home/ubuntu/youtube-trending-dbt/data/raw"
+  },
+  "files": [
+    {
+      "csv": {
+        "name": "CAvideos.csv",
+        "sha256": "e7ff7f574d1e3d685e5a9406cde3ed2aa0b83d8f07d6d989e03c36d815f430b3",
+        "size_bytes": 64067991
+      },
+      "json": {
+        "name": "CA_category_id.json",
+        "sha256": "b84afd7b659df4d7fa74ae7fbdfceb83fbacaafe8d857c7cc358fefed0b73205",
+        "size_bytes": 7911
+      },
+      "region": "CA"
+    },
+    {
+      "csv": {
+        "name": "DEvideos.csv",
+        "sha256": "d0685b5281a295bdb5cf114a278696a681c7feac1172ad523c31461beb1980ea",
+        "size_bytes": 63040138
+      },
+      "json": {
+        "name": "DE_category_id.json",
+        "sha256": "b84afd7b659df4d7fa74ae7fbdfceb83fbacaafe8d857c7cc358fefed0b73205",
+        "size_bytes": 7911
+      },
+      "region": "DE"
+    },
+    {
+      "csv": {
+        "name": "FRvideos.csv",
+        "sha256": "cd318029a4b6d4ddd5f8ec644a790587e4fe692317e4f4adc7be503de7fbbb17",
+        "size_bytes": 51424708
+      },
+      "json": {
+        "name": "FR_category_id.json",
+        "sha256": "b84afd7b659df4d7fa74ae7fbdfceb83fbacaafe8d857c7cc358fefed0b73205",
+        "size_bytes": 7911
+      },
+      "region": "FR"
+    },
+    {
+      "csv": {
+        "name": "GBvideos.csv",
+        "sha256": "5f5c100e150be2baaf7f9a3198a8216ce107b7e03e4572790c15e698d8e763cb",
+        "size_bytes": 53213441
+      },
+      "json": {
+        "name": "GB_category_id.json",
+        "sha256": "80e23a959a55a27beed84be5f87fe0833baa8c29d53e64bbae23e5f6d4fb8fbc",
+        "size_bytes": 8225
+      },
+      "region": "GB"
+    },
+    {
+      "csv": {
+        "name": "INvideos.csv",
+        "sha256": "008313f3feb80dc94cbd3112437dfc9b4ab6a5c7bd5c892ab3c85e6582137b29",
+        "size_bytes": 59600439
+      },
+      "json": {
+        "name": "IN_category_id.json",
+        "sha256": "f857cd2b580ebe12e5b290f331fe2aac21ae4200ced4c9e03a317de47100752f",
+        "size_bytes": 8225
+      },
+      "region": "IN"
+    },
+    {
+      "csv": {
+        "name": "JPvideos.csv",
+        "sha256": "3dcc8a7a40f979c4f9a2431eb0f1061853a29086866d81de4fc8c714e1d38cf2",
+        "size_bytes": 28740747
+      },
+      "json": {
+        "name": "JP_category_id.json",
+        "sha256": "f857cd2b580ebe12e5b290f331fe2aac21ae4200ced4c9e03a317de47100752f",
+        "size_bytes": 8225
+      },
+      "region": "JP"
+    },
+    {
+      "csv": {
+        "name": "KRvideos.csv",
+        "sha256": "4567450dce9c3b489c7a949d1e10eaf70c999d58355f537374f8b0189580ce77",
+        "size_bytes": 34835868
+      },
+      "json": {
+        "name": "KR_category_id.json",
+        "sha256": "f857cd2b580ebe12e5b290f331fe2aac21ae4200ced4c9e03a317de47100752f",
+        "size_bytes": 8225
+      },
+      "region": "KR"
+    },
+    {
+      "csv": {
+        "name": "MXvideos.csv",
+        "sha256": "9cf987c1a9594a84839f2888474454c849f211e075fde9eb41f49c8620ac5a04",
+        "size_bytes": 45191541
+      },
+      "json": {
+        "name": "MX_category_id.json",
+        "sha256": "f857cd2b580ebe12e5b290f331fe2aac21ae4200ced4c9e03a317de47100752f",
+        "size_bytes": 8225
+      },
+      "region": "MX"
+    },
+    {
+      "csv": {
+        "name": "RUvideos.csv",
+        "sha256": "9ae2cf47b6f2ae3b3f5c35c6d34b052f2134df9f9ed744e930ed9acac725d556",
+        "size_bytes": 76268286
+      },
+      "json": {
+        "name": "RU_category_id.json",
+        "sha256": "f857cd2b580ebe12e5b290f331fe2aac21ae4200ced4c9e03a317de47100752f",
+        "size_bytes": 8225
+      },
+      "region": "RU"
+    },
+    {
+      "csv": {
+        "name": "USvideos.csv",
+        "sha256": "09b4eb71295752705e472ebefeac9d2afab4177b7a818af795dea62744a48eb2",
+        "size_bytes": 62756152
+      },
+      "json": {
+        "name": "US_category_id.json",
+        "sha256": "2e892c5a5e48d284e40fd37de0313912264041aef8833e5323bd2b2fd08c7e25",
+        "size_bytes": 8496
+      },
+      "region": "US"
+    }
+  ],
+  "profile": {
+    "duplicate_grain_keys": 14518,
+    "exact_duplicate_rows": 12570,
+    "report": "docs/data-profile.md",
+    "total_rows": 375942,
+    "videos_in_multiple_regions": 66449
+  },
+  "profiler": {
+    "name": "scripts/profile_dataset.py",
+    "stdlib_only": true
+  },
+  "source": {
+    "acquisition": "user-provided ZIP",
+    "license": "CC0: Public Domain",
+    "owner": "datasnaek",
+    "snapshot_observed_at": "2026-08-15",
+    "title": "Trending YouTube Video Statistics",
+    "url": "https://www.kaggle.com/datasets/datasnaek/youtube-new"
+  }
+}
