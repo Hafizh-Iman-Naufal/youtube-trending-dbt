@@ -1,0 +1,3 @@
+video_id,trending_date,title,channel_title,category_id,publish_time,tags,views,likes,dislikes,comment_count,thumbnail_link,comments_disabled,ratings_disabled,video_error_or_removed,description
+vCA00001,17.14.11,Sample CA Video 1,Sample Channel CA,10,2017-11-13T10:00:00.000Z,tag1|tag2|tag3,1000,50,5,12,https://i.ytimg.com/vi/vCA00001/hqdefault.jpg,False,False,False,Sample description CA 1
+vCA00002,18.01.01,Sample CA Video 2,Sample Channel CA,20,2018-01-01T00:00:00.000Z,news|breaking,5000,200,10,30,https://i.ytimg.com/vi/vCA00002/hqdefault.jpg,False,False,False,

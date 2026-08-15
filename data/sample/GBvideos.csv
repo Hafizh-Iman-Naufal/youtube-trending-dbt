@@ -1,0 +1,3 @@
+video_id,trending_date,title,channel_title,category_id,publish_time,tags,views,likes,dislikes,comment_count,thumbnail_link,comments_disabled,ratings_disabled,video_error_or_removed,description
+vGB00001,17.14.11,Sample GB Video 1,Sample Channel GB,10,2017-11-13T13:00:00.000Z,music|uk,4000,200,10,50,https://i.ytimg.com/vi/vGB00001/hqdefault.jpg,False,False,False,Sample description GB 1
+vGB00002,18.04.05,Sample GB Video 2,Sample Channel GB,26,2018-04-05T14:00:00.000Z,howto|style,12000,500,30,80,https://i.ytimg.com/vi/vGB00002/hqdefault.jpg,False,False,True,Sample description GB 2

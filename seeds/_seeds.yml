@@ -1,0 +1,23 @@
+version: 2
+
+seeds:
+  - name: region_metadata
+    description: Region reference for the YouTube trending dataset.
+    columns:
+      - name: region_code
+        description: Two-letter region code used as a join key.
+        tests:
+          - not_null
+          - unique
+      - name: region_name
+        description: Human-readable region name.
+        tests:
+          - not_null
+      - name: locale
+        description: BCP-47 locale tag.
+        tests:
+          - not_null
+      - name: language_code
+        description: ISO-639-1 language code.
+        tests:
+          - not_null

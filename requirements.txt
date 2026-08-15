@@ -1,0 +1,6 @@
+# dbt + DuckDB portfolio project
+# Tested with Python 3.11/3.12 against the versions below.
+# For downstream users, the project supports Python >=3.12.
+dbt-core==1.12.2
+dbt-duckdb==1.11.0
+duckdb==1.5.5

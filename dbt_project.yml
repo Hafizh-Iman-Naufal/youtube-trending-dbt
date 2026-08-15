@@ -1,0 +1,41 @@
+# dbt project: youtube-trending-dbt
+name: 'youtube_trending_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'youtube_trending_dbt'
+
+clean-targets:
+  - "target"
+  - "logs"
+  - "dbt_packages"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+
+vars:
+  # source path: 'sample' (committed, CI) or 'raw' (full, local only)
+  source_kind: 'sample'
+
+models:
+  staging:
+    +materialized: view
+    +schema: staging
+  intermediate:
+    +materialized: view
+    +schema: intermediate
+  core:
+    +materialized: table
+    +schema: core
+  marts:
+    +materialized: table
+    +schema: marts
+
+seeds:
+  +schema: seeds

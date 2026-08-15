@@ -1,0 +1,11 @@
+region_code,region_name,locale,language_code
+CA,Canada,en_CA,en
+DE,Germany,de_DE,de
+FR,France,fr_FR,fr
+GB,United Kingdom,en_GB,en
+IN,India,en_IN,en
+JP,Japan,ja_JP,ja
+KR,South Korea,ko_KR,ko
+MX,Mexico,es_MX,es
+RU,Russia,ru_RU,ru
+US,United States,en_US,en

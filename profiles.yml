@@ -1,0 +1,9 @@
+# Local development profile. Committed to the repo by design — no secrets.
+# DUCKDB_PATH can be overridden for full-data runs.
+youtube_trending_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DUCKDB_PATH', 'data/sample.duckdb') }}"
+      threads: 4

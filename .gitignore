@@ -11,6 +11,8 @@ venv/
 target/
 logs/
 dbt_packages/
+.user.yml
+package-lock.yml
 
 # DuckDB
 data/*.duckdb

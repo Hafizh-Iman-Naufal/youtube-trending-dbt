@@ -1,0 +1,3 @@
+video_id,trending_date,title,channel_title,category_id,publish_time,tags,views,likes,dislikes,comment_count,thumbnail_link,comments_disabled,ratings_disabled,video_error_or_removed,description
+vFR00001,17.14.11,Sample FR Video 1,Sample Channel FR,22,2017-11-13T12:00:00.000Z,people|actu,3000,150,8,40,https://i.ytimg.com/vi/vFR00001/hqdefault.jpg,False,False,False,Sample description FR 1
+vFR00002,18.03.10,Sample FR Video 2,Sample Channel FR,23,2018-03-10T09:00:00.000Z,musique|pop,8000,300,20,60,https://i.ytimg.com/vi/vFR00002/hqdefault.jpg,False,True,False,Sample description FR 2
