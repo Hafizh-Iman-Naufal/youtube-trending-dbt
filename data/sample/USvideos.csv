@@ -1,3 +1,3 @@
 video_id,trending_date,title,channel_title,category_id,publish_time,tags,views,likes,dislikes,comment_count,thumbnail_link,comments_disabled,ratings_disabled,video_error_or_removed,description
 vUS00001,17.14.11,Sample US Video 1,Sample Channel US,10,2017-11-13T00:00:00.000Z,music|pop,100000,5000,200,1000,https://i.ytimg.com/vi/vUS00001/hqdefault.jpg,False,False,False,Sample description US 1
-vUS00002,18.02.28,Sample US Video 2,Sample Channel US,17,2018-02-28T01:00:00.000Z,sports|nba,150000,8000,300,1500,https://i.ytimg.com/vi/vUS00002/hqdefault.jpg,False,False,False,Sample description US 2
+vUS00002,18.28.02,Sample US Video 2,Sample Channel US,17,2018-02-28T01:00:00.000Z,sports|nba,150000,8000,300,1500,https://i.ytimg.com/vi/vUS00002/hqdefault.jpg,False,False,False,Sample description US 2

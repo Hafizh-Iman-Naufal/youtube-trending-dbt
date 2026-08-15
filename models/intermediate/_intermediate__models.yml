@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: int_video_observations_enriched
+    description: |
+      Per-observation enrichment: joined to category metadata, with
+      point-in-time engagement rates using `safe_divide` and a
+      `has_valid_engagement` flag for downstream filtering.
+    columns:
+      - name: observation_key
+        description: Surrogate key from (region_code, video_id, trending_date).
+        tests:
+          - not_null
+          - unique
+      - name: region_code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: video_id
+        tests: [not_null]
+      - name: trending_date_parsed
+        description: Parsed observation date.
+        tests: [not_null]
+      - name: like_rate
+        description: likes / views. NULL when views = 0 or NULL.
+      - name: dislike_rate
+        description: dislikes / views. NULL when views = 0 or NULL.
+      - name: comment_rate
+        description: comment_count / views. NULL when views = 0 or NULL.
+      - name: engagement_rate
+        description: (likes + dislikes + comment_count) / views. NULL when views = 0 or NULL.
+      - name: has_valid_engagement
+        description: false when video_error_or_removed=true, ratings_disabled=true, or views=0.
+        tests: [not_null]
+      - name: tag_count
+        description: Number of tags parsed from the raw pipe-delimited string.
+        tests: [not_null]
+
+  - name: int_video_lifecycle
+    description: |
+      Per-(region_code, video_id) lifecycle fields: first/last trending
+      date, observed trending days, latest and peak snapshot measures,
+      days from publication to first trending appearance.
+    columns:
+      - name: video_region_key
+        description: Surrogate key from (region_code, video_id).
+        tests:
+          - not_null
+          - unique
+      - name: region_code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: video_id
+        tests: [not_null]
+      - name: first_trending_date
+        tests: [not_null]
+      - name: last_trending_date
+        tests: [not_null]
+      - name: observed_trending_days
+        tests: [not_null]
+      - name: latest_views
+        description: views at the latest observation date for this video (snapshot).
+      - name: peak_views
+        description: maximum views observed across all observations.
+      - name: days_publish_to_first_trending
+        description: Days from publication to first trending appearance.
