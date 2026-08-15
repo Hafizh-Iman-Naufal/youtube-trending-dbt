@@ -1,0 +1,63 @@
+name: dbt
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build sample fixture (use real category JSONs if data/raw exists)
+        run: |
+          if [ -d data/raw ] && [ -f data/raw/CA_category_id.json ]; then
+            python scripts/build_sample_fixture.py --out-dir data/sample --from-raw data/raw
+          else
+            python scripts/build_sample_fixture.py --out-dir data/sample
+          fi
+
+      - name: Validate sample fixture
+        run: python scripts/validate_raw_files.py --raw-dir data/sample
+
+      - name: Load sample into DuckDB
+        run: python scripts/load_to_duckdb.py --raw-dir data/sample --database data/sample.duckdb
+
+      - name: dbt deps
+        run: dbt deps --profiles-dir .
+
+      - name: dbt seed
+        run: dbt seed --profiles-dir .
+
+      - name: dbt build
+        run: dbt build --profiles-dir .
+
+      - name: dbt docs generate
+        run: dbt docs generate --profiles-dir .
+
+      - name: Upload dbt artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dbt-artifacts
+          path: |
+            target/
+          retention-days: 7
