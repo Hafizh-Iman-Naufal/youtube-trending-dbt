@@ -75,7 +75,7 @@ SAMPLE_ROWS = {
          "https://i.ytimg.com/vi/vIN00001/hqdefault.jpg", "False", "False", "False",
          "Sample description IN 1"),
         ("vIN00002", "18.05.01", "Sample IN Video 2", "Sample Channel IN", "24",
-         "2018-05-01T15:00:00.000Z", "cricket|match", "50000", "2000", "100", "500",
+         "2018-01-01T15:00:00.000Z", "cricket|match", "50000", "2000", "100", "500",
          "https://i.ytimg.com/vi/vIN00002/hqdefault.jpg", "False", "False", "False",
          "Sample description IN 2"),
     ],

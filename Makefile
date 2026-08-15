@@ -33,8 +33,9 @@ seed: ## load region_metadata seed (runs dbt deps first)
 	$(DBT) deps $(PROFILES)
 	$(DBT) seed $(PROFILES)
 
-build: ## dbt build (run + test) full project (runs dbt deps first)
+build: ## dbt build (run + test) full project (runs dbt deps + seed first)
 	$(DBT) deps $(PROFILES)
+	$(DBT) seed $(PROFILES)
 	$(DBT) build $(PROFILES)
 
 test: ## dbt test only (runs dbt deps first)
