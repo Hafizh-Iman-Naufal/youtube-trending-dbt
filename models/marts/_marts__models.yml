@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: mart_video_lifecycle
+    description: "Per (region_code, video_id) video lifecycle summary. Grain: (region_code, video_id)."
+    columns:
+      - name: video_region_key
+        tests: [not_null, unique]
+      - name: region_code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: video_id
+        tests: [not_null]
+      - name: observed_trending_days
+        tests: [not_null]
+
+  - name: mart_channel_performance
+    description: |
+      Per (region_code, channel_title) channel performance summary.
+      channel_title is a display label only — NOT a stable channel key.
+      Same display name can refer to different channels; row count
+      captures label collisions as duplicates.
+    columns:
+      - name: region_code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: channel_title
+        tests: [not_null]
+      - name: distinct_videos
+        tests: [not_null]
+
+  - name: mart_category_performance
+    description: "Per (region_code, category_id, trending_date) category performance. Daily grain."
+    columns:
+      - name: region_code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: category_id
+        tests: [not_null]
+      - name: trending_date
+        tests: [not_null]
+      - name: observations
+        tests: [not_null]
+
+  - name: mart_regional_trending
+    description: "Per (region_code, trending_date) regional trending overview."
+    columns:
+      - name: region_code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: trending_date
+        tests: [not_null]
+      - name: observations
+        tests: [not_null]
