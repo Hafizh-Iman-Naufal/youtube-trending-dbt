@@ -1,0 +1,96 @@
+version: 2
+
+models:
+  - name: dim_region
+    description: "One row per supported source region. Grain: region_code."
+    columns:
+      - name: region_key
+        description: Surrogate key from region_code.
+        tests: [not_null, unique]
+      - name: region_code
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+
+  - name: dim_category
+    description: "One row per (region_code, category_id). Category lists are region-scoped; never dedup across regions."
+    columns:
+      - name: category_key
+        description: Surrogate key from (region_code, category_id).
+        tests: [not_null, unique]
+      - name: region_code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: category_id
+        tests: [not_null]
+
+  - name: dim_video
+    description: |
+      One row per (region_code, video_id). Carries the LATEST observation's
+      representative metadata (title, channel, publish_time, thumbnail).
+      Metadata can change across daily observations; this is a current
+      snapshot, not a Type-2 history. channel_title is a display label,
+      NOT a stable channel key — there is no dim_channel.
+    columns:
+      - name: video_key
+        description: Surrogate key from (region_code, video_id).
+        tests: [not_null, unique]
+      - name: region_code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: video_id
+        tests: [not_null]
+      - name: channel_title
+        description: Display label only. NOT a foreign key.
+
+  - name: fct_video_trending_daily
+    description: |
+      One row per (region_code, video_id, trending_date) trending observation.
+      Cumulative source measures are point-in-time snapshots, NOT deltas.
+      Never sum views/likes/dislikes/comment_count across dates.
+    columns:
+      - name: observation_key
+        description: Surrogate key from (region_code, video_id, trending_date).
+        tests: [not_null, unique]
+      - name: region_code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CA','DE','FR','GB','IN','JP','KR','MX','RU','US']
+      - name: video_id
+        tests: [not_null]
+      - name: trending_date
+        tests: [not_null]
+      - name: region_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_region')
+              field: region_key
+      - name: video_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_video')
+              field: video_key
+      - name: category_key
+        tests:
+          - relationships:
+              to: ref('dim_category')
+              field: category_key
+      - name: views
+        tests: [not_null]
+      - name: likes
+        tests: [not_null]
+      - name: dislikes
+        tests: [not_null]
+      - name: comment_count
+        tests: [not_null]
+      - name: has_valid_engagement
+        tests: [not_null]
