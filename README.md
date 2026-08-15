@@ -67,8 +67,8 @@ python3 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
 
 make validate-sample    # run the same validator against data/sample/
-make load-sample        # load sample into data/sample.duckdb
-make build              # dbt deps + seed + build (run + test) everything
+make build-sample       # build sample fixture + seed + dbt build (everything)
+make build-full         # load full data + seed + dbt build (everything)
 make test               # dbt test only
 make docs               # generate dbt docs
 ```
@@ -89,10 +89,7 @@ make docs               # generate dbt docs
 3. Run the full pipeline:
 
    ```bash
-   python3 scripts/load_to_duckdb.py --raw-dir data/raw \
-                                   --database data/youtube.duckdb
-   DUCKDB_PATH=data/youtube.duckdb make build
-   DUCKDB_PATH=data/youtube.duckdb make test
+   make build-full
    ```
 
 ## Architecture

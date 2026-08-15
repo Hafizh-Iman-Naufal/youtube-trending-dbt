@@ -53,6 +53,14 @@ jobs:
       - name: dbt docs generate
         run: dbt docs generate --profiles-dir .
 
+      - name: dbt docs serve (smoke test)
+        run: |
+          dbt docs serve --profiles-dir . --host 127.0.0.1 --port 8080 &
+          SERVE_PID=$!
+          sleep 5
+          curl -fsS http://127.0.0.1:8080/ >/dev/null && echo "docs serve OK"
+          kill $SERVE_PID || true
+
       - name: Upload dbt artifacts
         if: always()
         uses: actions/upload-artifact@v4
