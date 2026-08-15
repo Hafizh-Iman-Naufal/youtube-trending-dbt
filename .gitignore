@@ -16,12 +16,8 @@ dbt_packages/
 data/*.duckdb
 data/*.duckdb.wal
 
-# Raw Kaggle data (large, regenerable from the zip you keep locally)
+# Raw Kaggle data (large, regenerable from the zip kept locally)
 data/raw/
-
-# Generated profiling artifacts
-docs/data-profile.md
-/tmp-data-profile.md
 
 # OS / editor
 .DS_Store

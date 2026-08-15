@@ -1,0 +1,1974 @@
+{
+  "csv": {
+    "extra": [],
+    "found": [
+      "CAvideos.csv",
+      "DEvideos.csv",
+      "FRvideos.csv",
+      "GBvideos.csv",
+      "INvideos.csv",
+      "JPvideos.csv",
+      "KRvideos.csv",
+      "MXvideos.csv",
+      "RUvideos.csv",
+      "USvideos.csv"
+    ],
+    "missing": []
+  },
+  "expected_regions": [
+    "CA",
+    "DE",
+    "FR",
+    "GB",
+    "IN",
+    "JP",
+    "KR",
+    "MX",
+    "RU",
+    "US"
+  ],
+  "files": [
+    {
+      "column_count": 16,
+      "encoding": "utf-8",
+      "file": "CAvideos.csv",
+      "header": [
+        "video_id",
+        "trending_date",
+        "title",
+        "channel_title",
+        "category_id",
+        "publish_time",
+        "tags",
+        "views",
+        "likes",
+        "dislikes",
+        "comment_count",
+        "thumbnail_link",
+        "comments_disabled",
+        "ratings_disabled",
+        "video_error_or_removed",
+        "description"
+      ],
+      "line_ending": "CRLF",
+      "sha256": "e7ff7f574d1e3d685e5a9406cde3ed2aa0b83d8f07d6d989e03c36d815f430b3",
+      "size_bytes": 64067991,
+      "type": "csv"
+    },
+    {
+      "column_count": 16,
+      "encoding": "utf-8",
+      "file": "DEvideos.csv",
+      "header": [
+        "video_id",
+        "trending_date",
+        "title",
+        "channel_title",
+        "category_id",
+        "publish_time",
+        "tags",
+        "views",
+        "likes",
+        "dislikes",
+        "comment_count",
+        "thumbnail_link",
+        "comments_disabled",
+        "ratings_disabled",
+        "video_error_or_removed",
+        "description"
+      ],
+      "line_ending": "CRLF",
+      "sha256": "d0685b5281a295bdb5cf114a278696a681c7feac1172ad523c31461beb1980ea",
+      "size_bytes": 63040138,
+      "type": "csv"
+    },
+    {
+      "column_count": 16,
+      "encoding": "utf-8",
+      "file": "FRvideos.csv",
+      "header": [
+        "video_id",
+        "trending_date",
+        "title",
+        "channel_title",
+        "category_id",
+        "publish_time",
+        "tags",
+        "views",
+        "likes",
+        "dislikes",
+        "comment_count",
+        "thumbnail_link",
+        "comments_disabled",
+        "ratings_disabled",
+        "video_error_or_removed",
+        "description"
+      ],
+      "line_ending": "LF",
+      "sha256": "cd318029a4b6d4ddd5f8ec644a790587e4fe692317e4f4adc7be503de7fbbb17",
+      "size_bytes": 51424708,
+      "type": "csv"
+    },
+    {
+      "column_count": 16,
+      "encoding": "utf-8",
+      "file": "GBvideos.csv",
+      "header": [
+        "video_id",
+        "trending_date",
+        "title",
+        "channel_title",
+        "category_id",
+        "publish_time",
+        "tags",
+        "views",
+        "likes",
+        "dislikes",
+        "comment_count",
+        "thumbnail_link",
+        "comments_disabled",
+        "ratings_disabled",
+        "video_error_or_removed",
+        "description"
+      ],
+      "line_ending": "CRLF",
+      "sha256": "5f5c100e150be2baaf7f9a3198a8216ce107b7e03e4572790c15e698d8e763cb",
+      "size_bytes": 53213441,
+      "type": "csv"
+    },
+    {
+      "column_count": 16,
+      "encoding": "utf-8",
+      "file": "INvideos.csv",
+      "header": [
+        "video_id",
+        "trending_date",
+        "title",
+        "channel_title",
+        "category_id",
+        "publish_time",
+        "tags",
+        "views",
+        "likes",
+        "dislikes",
+        "comment_count",
+        "thumbnail_link",
+        "comments_disabled",
+        "ratings_disabled",
+        "video_error_or_removed",
+        "description"
+      ],
+      "line_ending": "CRLF",
+      "sha256": "008313f3feb80dc94cbd3112437dfc9b4ab6a5c7bd5c892ab3c85e6582137b29",
+      "size_bytes": 59600439,
+      "type": "csv"
+    },
+    {
+      "column_count": 16,
+      "encoding": "utf-8",
+      "file": "JPvideos.csv",
+      "header": [
+        "video_id",
+        "trending_date",
+        "title",
+        "channel_title",
+        "category_id",
+        "publish_time",
+        "tags",
+        "views",
+        "likes",
+        "dislikes",
+        "comment_count",
+        "thumbnail_link",
+        "comments_disabled",
+        "ratings_disabled",
+        "video_error_or_removed",
+        "description"
+      ],
+      "line_ending": "CRLF",
+      "sha256": "3dcc8a7a40f979c4f9a2431eb0f1061853a29086866d81de4fc8c714e1d38cf2",
+      "size_bytes": 28740747,
+      "type": "csv"
+    },
+    {
+      "column_count": 16,
+      "encoding": "utf-8",
+      "file": "KRvideos.csv",
+      "header": [
+        "video_id",
+        "trending_date",
+        "title",
+        "channel_title",
+        "category_id",
+        "publish_time",
+        "tags",
+        "views",
+        "likes",
+        "dislikes",
+        "comment_count",
+        "thumbnail_link",
+        "comments_disabled",
+        "ratings_disabled",
+        "video_error_or_removed",
+        "description"
+      ],
+      "line_ending": "CRLF",
+      "sha256": "4567450dce9c3b489c7a949d1e10eaf70c999d58355f537374f8b0189580ce77",
+      "size_bytes": 34835868,
+      "type": "csv"
+    },
+    {
+      "column_count": 16,
+      "encoding": "utf-8",
+      "file": "MXvideos.csv",
+      "header": [
+        "video_id",
+        "trending_date",
+        "title",
+        "channel_title",
+        "category_id",
+        "publish_time",
+        "tags",
+        "views",
+        "likes",
+        "dislikes",
+        "comment_count",
+        "thumbnail_link",
+        "comments_disabled",
+        "ratings_disabled",
+        "video_error_or_removed",
+        "description"
+      ],
+      "line_ending": "CRLF",
+      "sha256": "9cf987c1a9594a84839f2888474454c849f211e075fde9eb41f49c8620ac5a04",
+      "size_bytes": 45191541,
+      "type": "csv"
+    },
+    {
+      "column_count": 16,
+      "encoding": "latin-1",
+      "file": "RUvideos.csv",
+      "header": [
+        "video_id",
+        "trending_date",
+        "title",
+        "channel_title",
+        "category_id",
+        "publish_time",
+        "tags",
+        "views",
+        "likes",
+        "dislikes",
+        "comment_count",
+        "thumbnail_link",
+        "comments_disabled",
+        "ratings_disabled",
+        "video_error_or_removed",
+        "description"
+      ],
+      "line_ending": "CRLF",
+      "sha256": "9ae2cf47b6f2ae3b3f5c35c6d34b052f2134df9f9ed744e930ed9acac725d556",
+      "size_bytes": 76268286,
+      "type": "csv"
+    },
+    {
+      "column_count": 16,
+      "encoding": "utf-8",
+      "file": "USvideos.csv",
+      "header": [
+        "video_id",
+        "trending_date",
+        "title",
+        "channel_title",
+        "category_id",
+        "publish_time",
+        "tags",
+        "views",
+        "likes",
+        "dislikes",
+        "comment_count",
+        "thumbnail_link",
+        "comments_disabled",
+        "ratings_disabled",
+        "video_error_or_removed",
+        "description"
+      ],
+      "line_ending": "CRLF",
+      "sha256": "09b4eb71295752705e472ebefeac9d2afab4177b7a818af795dea62744a48eb2",
+      "size_bytes": 62756152,
+      "type": "csv"
+    },
+    {
+      "encoding": "utf-8",
+      "file": "CA_category_id.json",
+      "item_count": 31,
+      "items": [
+        {
+          "assignable": true,
+          "id": "1",
+          "title": "Film & Animation"
+        },
+        {
+          "assignable": true,
+          "id": "2",
+          "title": "Autos & Vehicles"
+        },
+        {
+          "assignable": true,
+          "id": "10",
+          "title": "Music"
+        },
+        {
+          "assignable": true,
+          "id": "15",
+          "title": "Pets & Animals"
+        },
+        {
+          "assignable": true,
+          "id": "17",
+          "title": "Sports"
+        },
+        {
+          "assignable": false,
+          "id": "18",
+          "title": "Short Movies"
+        },
+        {
+          "assignable": true,
+          "id": "19",
+          "title": "Travel & Events"
+        },
+        {
+          "assignable": true,
+          "id": "20",
+          "title": "Gaming"
+        },
+        {
+          "assignable": false,
+          "id": "21",
+          "title": "Videoblogging"
+        },
+        {
+          "assignable": true,
+          "id": "22",
+          "title": "People & Blogs"
+        },
+        {
+          "assignable": true,
+          "id": "23",
+          "title": "Comedy"
+        },
+        {
+          "assignable": true,
+          "id": "24",
+          "title": "Entertainment"
+        },
+        {
+          "assignable": true,
+          "id": "25",
+          "title": "News & Politics"
+        },
+        {
+          "assignable": true,
+          "id": "26",
+          "title": "Howto & Style"
+        },
+        {
+          "assignable": true,
+          "id": "27",
+          "title": "Education"
+        },
+        {
+          "assignable": true,
+          "id": "28",
+          "title": "Science & Technology"
+        },
+        {
+          "assignable": false,
+          "id": "30",
+          "title": "Movies"
+        },
+        {
+          "assignable": false,
+          "id": "31",
+          "title": "Anime/Animation"
+        },
+        {
+          "assignable": false,
+          "id": "32",
+          "title": "Action/Adventure"
+        },
+        {
+          "assignable": false,
+          "id": "33",
+          "title": "Classics"
+        },
+        {
+          "assignable": false,
+          "id": "34",
+          "title": "Comedy"
+        },
+        {
+          "assignable": false,
+          "id": "35",
+          "title": "Documentary"
+        },
+        {
+          "assignable": false,
+          "id": "36",
+          "title": "Drama"
+        },
+        {
+          "assignable": false,
+          "id": "37",
+          "title": "Family"
+        },
+        {
+          "assignable": false,
+          "id": "38",
+          "title": "Foreign"
+        },
+        {
+          "assignable": false,
+          "id": "39",
+          "title": "Horror"
+        },
+        {
+          "assignable": false,
+          "id": "40",
+          "title": "Sci-Fi/Fantasy"
+        },
+        {
+          "assignable": false,
+          "id": "41",
+          "title": "Thriller"
+        },
+        {
+          "assignable": false,
+          "id": "42",
+          "title": "Shorts"
+        },
+        {
+          "assignable": false,
+          "id": "43",
+          "title": "Shows"
+        },
+        {
+          "assignable": false,
+          "id": "44",
+          "title": "Trailers"
+        }
+      ],
+      "sha256": "b84afd7b659df4d7fa74ae7fbdfceb83fbacaafe8d857c7cc358fefed0b73205",
+      "size_bytes": 7911,
+      "type": "json"
+    },
+    {
+      "encoding": "utf-8",
+      "file": "DE_category_id.json",
+      "item_count": 31,
+      "items": [
+        {
+          "assignable": true,
+          "id": "1",
+          "title": "Film & Animation"
+        },
+        {
+          "assignable": true,
+          "id": "2",
+          "title": "Autos & Vehicles"
+        },
+        {
+          "assignable": true,
+          "id": "10",
+          "title": "Music"
+        },
+        {
+          "assignable": true,
+          "id": "15",
+          "title": "Pets & Animals"
+        },
+        {
+          "assignable": true,
+          "id": "17",
+          "title": "Sports"
+        },
+        {
+          "assignable": false,
+          "id": "18",
+          "title": "Short Movies"
+        },
+        {
+          "assignable": true,
+          "id": "19",
+          "title": "Travel & Events"
+        },
+        {
+          "assignable": true,
+          "id": "20",
+          "title": "Gaming"
+        },
+        {
+          "assignable": false,
+          "id": "21",
+          "title": "Videoblogging"
+        },
+        {
+          "assignable": true,
+          "id": "22",
+          "title": "People & Blogs"
+        },
+        {
+          "assignable": true,
+          "id": "23",
+          "title": "Comedy"
+        },
+        {
+          "assignable": true,
+          "id": "24",
+          "title": "Entertainment"
+        },
+        {
+          "assignable": true,
+          "id": "25",
+          "title": "News & Politics"
+        },
+        {
+          "assignable": true,
+          "id": "26",
+          "title": "Howto & Style"
+        },
+        {
+          "assignable": true,
+          "id": "27",
+          "title": "Education"
+        },
+        {
+          "assignable": true,
+          "id": "28",
+          "title": "Science & Technology"
+        },
+        {
+          "assignable": false,
+          "id": "30",
+          "title": "Movies"
+        },
+        {
+          "assignable": false,
+          "id": "31",
+          "title": "Anime/Animation"
+        },
+        {
+          "assignable": false,
+          "id": "32",
+          "title": "Action/Adventure"
+        },
+        {
+          "assignable": false,
+          "id": "33",
+          "title": "Classics"
+        },
+        {
+          "assignable": false,
+          "id": "34",
+          "title": "Comedy"
+        },
+        {
+          "assignable": false,
+          "id": "35",
+          "title": "Documentary"
+        },
+        {
+          "assignable": false,
+          "id": "36",
+          "title": "Drama"
+        },
+        {
+          "assignable": false,
+          "id": "37",
+          "title": "Family"
+        },
+        {
+          "assignable": false,
+          "id": "38",
+          "title": "Foreign"
+        },
+        {
+          "assignable": false,
+          "id": "39",
+          "title": "Horror"
+        },
+        {
+          "assignable": false,
+          "id": "40",
+          "title": "Sci-Fi/Fantasy"
+        },
+        {
+          "assignable": false,
+          "id": "41",
+          "title": "Thriller"
+        },
+        {
+          "assignable": false,
+          "id": "42",
+          "title": "Shorts"
+        },
+        {
+          "assignable": false,
+          "id": "43",
+          "title": "Shows"
+        },
+        {
+          "assignable": false,
+          "id": "44",
+          "title": "Trailers"
+        }
+      ],
+      "sha256": "b84afd7b659df4d7fa74ae7fbdfceb83fbacaafe8d857c7cc358fefed0b73205",
+      "size_bytes": 7911,
+      "type": "json"
+    },
+    {
+      "encoding": "utf-8",
+      "file": "FR_category_id.json",
+      "item_count": 31,
+      "items": [
+        {
+          "assignable": true,
+          "id": "1",
+          "title": "Film & Animation"
+        },
+        {
+          "assignable": true,
+          "id": "2",
+          "title": "Autos & Vehicles"
+        },
+        {
+          "assignable": true,
+          "id": "10",
+          "title": "Music"
+        },
+        {
+          "assignable": true,
+          "id": "15",
+          "title": "Pets & Animals"
+        },
+        {
+          "assignable": true,
+          "id": "17",
+          "title": "Sports"
+        },
+        {
+          "assignable": false,
+          "id": "18",
+          "title": "Short Movies"
+        },
+        {
+          "assignable": true,
+          "id": "19",
+          "title": "Travel & Events"
+        },
+        {
+          "assignable": true,
+          "id": "20",
+          "title": "Gaming"
+        },
+        {
+          "assignable": false,
+          "id": "21",
+          "title": "Videoblogging"
+        },
+        {
+          "assignable": true,
+          "id": "22",
+          "title": "People & Blogs"
+        },
+        {
+          "assignable": true,
+          "id": "23",
+          "title": "Comedy"
+        },
+        {
+          "assignable": true,
+          "id": "24",
+          "title": "Entertainment"
+        },
+        {
+          "assignable": true,
+          "id": "25",
+          "title": "News & Politics"
+        },
+        {
+          "assignable": true,
+          "id": "26",
+          "title": "Howto & Style"
+        },
+        {
+          "assignable": true,
+          "id": "27",
+          "title": "Education"
+        },
+        {
+          "assignable": true,
+          "id": "28",
+          "title": "Science & Technology"
+        },
+        {
+          "assignable": false,
+          "id": "30",
+          "title": "Movies"
+        },
+        {
+          "assignable": false,
+          "id": "31",
+          "title": "Anime/Animation"
+        },
+        {
+          "assignable": false,
+          "id": "32",
+          "title": "Action/Adventure"
+        },
+        {
+          "assignable": false,
+          "id": "33",
+          "title": "Classics"
+        },
+        {
+          "assignable": false,
+          "id": "34",
+          "title": "Comedy"
+        },
+        {
+          "assignable": false,
+          "id": "35",
+          "title": "Documentary"
+        },
+        {
+          "assignable": false,
+          "id": "36",
+          "title": "Drama"
+        },
+        {
+          "assignable": false,
+          "id": "37",
+          "title": "Family"
+        },
+        {
+          "assignable": false,
+          "id": "38",
+          "title": "Foreign"
+        },
+        {
+          "assignable": false,
+          "id": "39",
+          "title": "Horror"
+        },
+        {
+          "assignable": false,
+          "id": "40",
+          "title": "Sci-Fi/Fantasy"
+        },
+        {
+          "assignable": false,
+          "id": "41",
+          "title": "Thriller"
+        },
+        {
+          "assignable": false,
+          "id": "42",
+          "title": "Shorts"
+        },
+        {
+          "assignable": false,
+          "id": "43",
+          "title": "Shows"
+        },
+        {
+          "assignable": false,
+          "id": "44",
+          "title": "Trailers"
+        }
+      ],
+      "sha256": "b84afd7b659df4d7fa74ae7fbdfceb83fbacaafe8d857c7cc358fefed0b73205",
+      "size_bytes": 7911,
+      "type": "json"
+    },
+    {
+      "encoding": "utf-8",
+      "file": "GB_category_id.json",
+      "item_count": 31,
+      "items": [
+        {
+          "assignable": true,
+          "id": "1",
+          "title": "Film & Animation"
+        },
+        {
+          "assignable": true,
+          "id": "2",
+          "title": "Autos & Vehicles"
+        },
+        {
+          "assignable": true,
+          "id": "10",
+          "title": "Music"
+        },
+        {
+          "assignable": true,
+          "id": "15",
+          "title": "Pets & Animals"
+        },
+        {
+          "assignable": true,
+          "id": "17",
+          "title": "Sports"
+        },
+        {
+          "assignable": false,
+          "id": "18",
+          "title": "Short Movies"
+        },
+        {
+          "assignable": true,
+          "id": "19",
+          "title": "Travel & Events"
+        },
+        {
+          "assignable": true,
+          "id": "20",
+          "title": "Gaming"
+        },
+        {
+          "assignable": false,
+          "id": "21",
+          "title": "Videoblogging"
+        },
+        {
+          "assignable": true,
+          "id": "22",
+          "title": "People & Blogs"
+        },
+        {
+          "assignable": true,
+          "id": "23",
+          "title": "Comedy"
+        },
+        {
+          "assignable": true,
+          "id": "24",
+          "title": "Entertainment"
+        },
+        {
+          "assignable": true,
+          "id": "25",
+          "title": "News & Politics"
+        },
+        {
+          "assignable": true,
+          "id": "26",
+          "title": "Howto & Style"
+        },
+        {
+          "assignable": true,
+          "id": "27",
+          "title": "Education"
+        },
+        {
+          "assignable": true,
+          "id": "28",
+          "title": "Science & Technology"
+        },
+        {
+          "assignable": false,
+          "id": "30",
+          "title": "Movies"
+        },
+        {
+          "assignable": false,
+          "id": "31",
+          "title": "Anime/Animation"
+        },
+        {
+          "assignable": false,
+          "id": "32",
+          "title": "Action/Adventure"
+        },
+        {
+          "assignable": false,
+          "id": "33",
+          "title": "Classics"
+        },
+        {
+          "assignable": false,
+          "id": "34",
+          "title": "Comedy"
+        },
+        {
+          "assignable": false,
+          "id": "35",
+          "title": "Documentary"
+        },
+        {
+          "assignable": false,
+          "id": "36",
+          "title": "Drama"
+        },
+        {
+          "assignable": false,
+          "id": "37",
+          "title": "Family"
+        },
+        {
+          "assignable": false,
+          "id": "38",
+          "title": "Foreign"
+        },
+        {
+          "assignable": false,
+          "id": "39",
+          "title": "Horror"
+        },
+        {
+          "assignable": false,
+          "id": "40",
+          "title": "Sci-Fi/Fantasy"
+        },
+        {
+          "assignable": false,
+          "id": "41",
+          "title": "Thriller"
+        },
+        {
+          "assignable": false,
+          "id": "42",
+          "title": "Shorts"
+        },
+        {
+          "assignable": false,
+          "id": "43",
+          "title": "Shows"
+        },
+        {
+          "assignable": false,
+          "id": "44",
+          "title": "Trailers"
+        }
+      ],
+      "sha256": "80e23a959a55a27beed84be5f87fe0833baa8c29d53e64bbae23e5f6d4fb8fbc",
+      "size_bytes": 8225,
+      "type": "json"
+    },
+    {
+      "encoding": "utf-8",
+      "file": "IN_category_id.json",
+      "item_count": 31,
+      "items": [
+        {
+          "assignable": true,
+          "id": "1",
+          "title": "Film & Animation"
+        },
+        {
+          "assignable": true,
+          "id": "2",
+          "title": "Autos & Vehicles"
+        },
+        {
+          "assignable": true,
+          "id": "10",
+          "title": "Music"
+        },
+        {
+          "assignable": true,
+          "id": "15",
+          "title": "Pets & Animals"
+        },
+        {
+          "assignable": true,
+          "id": "17",
+          "title": "Sports"
+        },
+        {
+          "assignable": false,
+          "id": "18",
+          "title": "Short Movies"
+        },
+        {
+          "assignable": true,
+          "id": "19",
+          "title": "Travel & Events"
+        },
+        {
+          "assignable": true,
+          "id": "20",
+          "title": "Gaming"
+        },
+        {
+          "assignable": false,
+          "id": "21",
+          "title": "Videoblogging"
+        },
+        {
+          "assignable": true,
+          "id": "22",
+          "title": "People & Blogs"
+        },
+        {
+          "assignable": true,
+          "id": "23",
+          "title": "Comedy"
+        },
+        {
+          "assignable": true,
+          "id": "24",
+          "title": "Entertainment"
+        },
+        {
+          "assignable": true,
+          "id": "25",
+          "title": "News & Politics"
+        },
+        {
+          "assignable": true,
+          "id": "26",
+          "title": "Howto & Style"
+        },
+        {
+          "assignable": true,
+          "id": "27",
+          "title": "Education"
+        },
+        {
+          "assignable": true,
+          "id": "28",
+          "title": "Science & Technology"
+        },
+        {
+          "assignable": false,
+          "id": "30",
+          "title": "Movies"
+        },
+        {
+          "assignable": false,
+          "id": "31",
+          "title": "Anime/Animation"
+        },
+        {
+          "assignable": false,
+          "id": "32",
+          "title": "Action/Adventure"
+        },
+        {
+          "assignable": false,
+          "id": "33",
+          "title": "Classics"
+        },
+        {
+          "assignable": false,
+          "id": "34",
+          "title": "Comedy"
+        },
+        {
+          "assignable": false,
+          "id": "35",
+          "title": "Documentary"
+        },
+        {
+          "assignable": false,
+          "id": "36",
+          "title": "Drama"
+        },
+        {
+          "assignable": false,
+          "id": "37",
+          "title": "Family"
+        },
+        {
+          "assignable": false,
+          "id": "38",
+          "title": "Foreign"
+        },
+        {
+          "assignable": false,
+          "id": "39",
+          "title": "Horror"
+        },
+        {
+          "assignable": false,
+          "id": "40",
+          "title": "Sci-Fi/Fantasy"
+        },
+        {
+          "assignable": false,
+          "id": "41",
+          "title": "Thriller"
+        },
+        {
+          "assignable": false,
+          "id": "42",
+          "title": "Shorts"
+        },
+        {
+          "assignable": false,
+          "id": "43",
+          "title": "Shows"
+        },
+        {
+          "assignable": false,
+          "id": "44",
+          "title": "Trailers"
+        }
+      ],
+      "sha256": "f857cd2b580ebe12e5b290f331fe2aac21ae4200ced4c9e03a317de47100752f",
+      "size_bytes": 8225,
+      "type": "json"
+    },
+    {
+      "encoding": "utf-8",
+      "file": "JP_category_id.json",
+      "item_count": 31,
+      "items": [
+        {
+          "assignable": true,
+          "id": "1",
+          "title": "Film & Animation"
+        },
+        {
+          "assignable": true,
+          "id": "2",
+          "title": "Autos & Vehicles"
+        },
+        {
+          "assignable": true,
+          "id": "10",
+          "title": "Music"
+        },
+        {
+          "assignable": true,
+          "id": "15",
+          "title": "Pets & Animals"
+        },
+        {
+          "assignable": true,
+          "id": "17",
+          "title": "Sports"
+        },
+        {
+          "assignable": false,
+          "id": "18",
+          "title": "Short Movies"
+        },
+        {
+          "assignable": true,
+          "id": "19",
+          "title": "Travel & Events"
+        },
+        {
+          "assignable": true,
+          "id": "20",
+          "title": "Gaming"
+        },
+        {
+          "assignable": false,
+          "id": "21",
+          "title": "Videoblogging"
+        },
+        {
+          "assignable": true,
+          "id": "22",
+          "title": "People & Blogs"
+        },
+        {
+          "assignable": true,
+          "id": "23",
+          "title": "Comedy"
+        },
+        {
+          "assignable": true,
+          "id": "24",
+          "title": "Entertainment"
+        },
+        {
+          "assignable": true,
+          "id": "25",
+          "title": "News & Politics"
+        },
+        {
+          "assignable": true,
+          "id": "26",
+          "title": "Howto & Style"
+        },
+        {
+          "assignable": true,
+          "id": "27",
+          "title": "Education"
+        },
+        {
+          "assignable": true,
+          "id": "28",
+          "title": "Science & Technology"
+        },
+        {
+          "assignable": false,
+          "id": "30",
+          "title": "Movies"
+        },
+        {
+          "assignable": false,
+          "id": "31",
+          "title": "Anime/Animation"
+        },
+        {
+          "assignable": false,
+          "id": "32",
+          "title": "Action/Adventure"
+        },
+        {
+          "assignable": false,
+          "id": "33",
+          "title": "Classics"
+        },
+        {
+          "assignable": false,
+          "id": "34",
+          "title": "Comedy"
+        },
+        {
+          "assignable": false,
+          "id": "35",
+          "title": "Documentary"
+        },
+        {
+          "assignable": false,
+          "id": "36",
+          "title": "Drama"
+        },
+        {
+          "assignable": false,
+          "id": "37",
+          "title": "Family"
+        },
+        {
+          "assignable": false,
+          "id": "38",
+          "title": "Foreign"
+        },
+        {
+          "assignable": false,
+          "id": "39",
+          "title": "Horror"
+        },
+        {
+          "assignable": false,
+          "id": "40",
+          "title": "Sci-Fi/Fantasy"
+        },
+        {
+          "assignable": false,
+          "id": "41",
+          "title": "Thriller"
+        },
+        {
+          "assignable": false,
+          "id": "42",
+          "title": "Shorts"
+        },
+        {
+          "assignable": false,
+          "id": "43",
+          "title": "Shows"
+        },
+        {
+          "assignable": false,
+          "id": "44",
+          "title": "Trailers"
+        }
+      ],
+      "sha256": "f857cd2b580ebe12e5b290f331fe2aac21ae4200ced4c9e03a317de47100752f",
+      "size_bytes": 8225,
+      "type": "json"
+    },
+    {
+      "encoding": "utf-8",
+      "file": "KR_category_id.json",
+      "item_count": 31,
+      "items": [
+        {
+          "assignable": true,
+          "id": "1",
+          "title": "Film & Animation"
+        },
+        {
+          "assignable": true,
+          "id": "2",
+          "title": "Autos & Vehicles"
+        },
+        {
+          "assignable": true,
+          "id": "10",
+          "title": "Music"
+        },
+        {
+          "assignable": true,
+          "id": "15",
+          "title": "Pets & Animals"
+        },
+        {
+          "assignable": true,
+          "id": "17",
+          "title": "Sports"
+        },
+        {
+          "assignable": false,
+          "id": "18",
+          "title": "Short Movies"
+        },
+        {
+          "assignable": true,
+          "id": "19",
+          "title": "Travel & Events"
+        },
+        {
+          "assignable": true,
+          "id": "20",
+          "title": "Gaming"
+        },
+        {
+          "assignable": false,
+          "id": "21",
+          "title": "Videoblogging"
+        },
+        {
+          "assignable": true,
+          "id": "22",
+          "title": "People & Blogs"
+        },
+        {
+          "assignable": true,
+          "id": "23",
+          "title": "Comedy"
+        },
+        {
+          "assignable": true,
+          "id": "24",
+          "title": "Entertainment"
+        },
+        {
+          "assignable": true,
+          "id": "25",
+          "title": "News & Politics"
+        },
+        {
+          "assignable": true,
+          "id": "26",
+          "title": "Howto & Style"
+        },
+        {
+          "assignable": true,
+          "id": "27",
+          "title": "Education"
+        },
+        {
+          "assignable": true,
+          "id": "28",
+          "title": "Science & Technology"
+        },
+        {
+          "assignable": false,
+          "id": "30",
+          "title": "Movies"
+        },
+        {
+          "assignable": false,
+          "id": "31",
+          "title": "Anime/Animation"
+        },
+        {
+          "assignable": false,
+          "id": "32",
+          "title": "Action/Adventure"
+        },
+        {
+          "assignable": false,
+          "id": "33",
+          "title": "Classics"
+        },
+        {
+          "assignable": false,
+          "id": "34",
+          "title": "Comedy"
+        },
+        {
+          "assignable": false,
+          "id": "35",
+          "title": "Documentary"
+        },
+        {
+          "assignable": false,
+          "id": "36",
+          "title": "Drama"
+        },
+        {
+          "assignable": false,
+          "id": "37",
+          "title": "Family"
+        },
+        {
+          "assignable": false,
+          "id": "38",
+          "title": "Foreign"
+        },
+        {
+          "assignable": false,
+          "id": "39",
+          "title": "Horror"
+        },
+        {
+          "assignable": false,
+          "id": "40",
+          "title": "Sci-Fi/Fantasy"
+        },
+        {
+          "assignable": false,
+          "id": "41",
+          "title": "Thriller"
+        },
+        {
+          "assignable": false,
+          "id": "42",
+          "title": "Shorts"
+        },
+        {
+          "assignable": false,
+          "id": "43",
+          "title": "Shows"
+        },
+        {
+          "assignable": false,
+          "id": "44",
+          "title": "Trailers"
+        }
+      ],
+      "sha256": "f857cd2b580ebe12e5b290f331fe2aac21ae4200ced4c9e03a317de47100752f",
+      "size_bytes": 8225,
+      "type": "json"
+    },
+    {
+      "encoding": "utf-8",
+      "file": "MX_category_id.json",
+      "item_count": 31,
+      "items": [
+        {
+          "assignable": true,
+          "id": "1",
+          "title": "Film & Animation"
+        },
+        {
+          "assignable": true,
+          "id": "2",
+          "title": "Autos & Vehicles"
+        },
+        {
+          "assignable": true,
+          "id": "10",
+          "title": "Music"
+        },
+        {
+          "assignable": true,
+          "id": "15",
+          "title": "Pets & Animals"
+        },
+        {
+          "assignable": true,
+          "id": "17",
+          "title": "Sports"
+        },
+        {
+          "assignable": false,
+          "id": "18",
+          "title": "Short Movies"
+        },
+        {
+          "assignable": true,
+          "id": "19",
+          "title": "Travel & Events"
+        },
+        {
+          "assignable": true,
+          "id": "20",
+          "title": "Gaming"
+        },
+        {
+          "assignable": false,
+          "id": "21",
+          "title": "Videoblogging"
+        },
+        {
+          "assignable": true,
+          "id": "22",
+          "title": "People & Blogs"
+        },
+        {
+          "assignable": true,
+          "id": "23",
+          "title": "Comedy"
+        },
+        {
+          "assignable": true,
+          "id": "24",
+          "title": "Entertainment"
+        },
+        {
+          "assignable": true,
+          "id": "25",
+          "title": "News & Politics"
+        },
+        {
+          "assignable": true,
+          "id": "26",
+          "title": "Howto & Style"
+        },
+        {
+          "assignable": true,
+          "id": "27",
+          "title": "Education"
+        },
+        {
+          "assignable": true,
+          "id": "28",
+          "title": "Science & Technology"
+        },
+        {
+          "assignable": false,
+          "id": "30",
+          "title": "Movies"
+        },
+        {
+          "assignable": false,
+          "id": "31",
+          "title": "Anime/Animation"
+        },
+        {
+          "assignable": false,
+          "id": "32",
+          "title": "Action/Adventure"
+        },
+        {
+          "assignable": false,
+          "id": "33",
+          "title": "Classics"
+        },
+        {
+          "assignable": false,
+          "id": "34",
+          "title": "Comedy"
+        },
+        {
+          "assignable": false,
+          "id": "35",
+          "title": "Documentary"
+        },
+        {
+          "assignable": false,
+          "id": "36",
+          "title": "Drama"
+        },
+        {
+          "assignable": false,
+          "id": "37",
+          "title": "Family"
+        },
+        {
+          "assignable": false,
+          "id": "38",
+          "title": "Foreign"
+        },
+        {
+          "assignable": false,
+          "id": "39",
+          "title": "Horror"
+        },
+        {
+          "assignable": false,
+          "id": "40",
+          "title": "Sci-Fi/Fantasy"
+        },
+        {
+          "assignable": false,
+          "id": "41",
+          "title": "Thriller"
+        },
+        {
+          "assignable": false,
+          "id": "42",
+          "title": "Shorts"
+        },
+        {
+          "assignable": false,
+          "id": "43",
+          "title": "Shows"
+        },
+        {
+          "assignable": false,
+          "id": "44",
+          "title": "Trailers"
+        }
+      ],
+      "sha256": "f857cd2b580ebe12e5b290f331fe2aac21ae4200ced4c9e03a317de47100752f",
+      "size_bytes": 8225,
+      "type": "json"
+    },
+    {
+      "encoding": "utf-8",
+      "file": "RU_category_id.json",
+      "item_count": 31,
+      "items": [
+        {
+          "assignable": true,
+          "id": "1",
+          "title": "Film & Animation"
+        },
+        {
+          "assignable": true,
+          "id": "2",
+          "title": "Autos & Vehicles"
+        },
+        {
+          "assignable": true,
+          "id": "10",
+          "title": "Music"
+        },
+        {
+          "assignable": true,
+          "id": "15",
+          "title": "Pets & Animals"
+        },
+        {
+          "assignable": true,
+          "id": "17",
+          "title": "Sports"
+        },
+        {
+          "assignable": false,
+          "id": "18",
+          "title": "Short Movies"
+        },
+        {
+          "assignable": true,
+          "id": "19",
+          "title": "Travel & Events"
+        },
+        {
+          "assignable": true,
+          "id": "20",
+          "title": "Gaming"
+        },
+        {
+          "assignable": false,
+          "id": "21",
+          "title": "Videoblogging"
+        },
+        {
+          "assignable": true,
+          "id": "22",
+          "title": "People & Blogs"
+        },
+        {
+          "assignable": true,
+          "id": "23",
+          "title": "Comedy"
+        },
+        {
+          "assignable": true,
+          "id": "24",
+          "title": "Entertainment"
+        },
+        {
+          "assignable": true,
+          "id": "25",
+          "title": "News & Politics"
+        },
+        {
+          "assignable": true,
+          "id": "26",
+          "title": "Howto & Style"
+        },
+        {
+          "assignable": true,
+          "id": "27",
+          "title": "Education"
+        },
+        {
+          "assignable": true,
+          "id": "28",
+          "title": "Science & Technology"
+        },
+        {
+          "assignable": false,
+          "id": "30",
+          "title": "Movies"
+        },
+        {
+          "assignable": false,
+          "id": "31",
+          "title": "Anime/Animation"
+        },
+        {
+          "assignable": false,
+          "id": "32",
+          "title": "Action/Adventure"
+        },
+        {
+          "assignable": false,
+          "id": "33",
+          "title": "Classics"
+        },
+        {
+          "assignable": false,
+          "id": "34",
+          "title": "Comedy"
+        },
+        {
+          "assignable": false,
+          "id": "35",
+          "title": "Documentary"
+        },
+        {
+          "assignable": false,
+          "id": "36",
+          "title": "Drama"
+        },
+        {
+          "assignable": false,
+          "id": "37",
+          "title": "Family"
+        },
+        {
+          "assignable": false,
+          "id": "38",
+          "title": "Foreign"
+        },
+        {
+          "assignable": false,
+          "id": "39",
+          "title": "Horror"
+        },
+        {
+          "assignable": false,
+          "id": "40",
+          "title": "Sci-Fi/Fantasy"
+        },
+        {
+          "assignable": false,
+          "id": "41",
+          "title": "Thriller"
+        },
+        {
+          "assignable": false,
+          "id": "42",
+          "title": "Shorts"
+        },
+        {
+          "assignable": false,
+          "id": "43",
+          "title": "Shows"
+        },
+        {
+          "assignable": false,
+          "id": "44",
+          "title": "Trailers"
+        }
+      ],
+      "sha256": "f857cd2b580ebe12e5b290f331fe2aac21ae4200ced4c9e03a317de47100752f",
+      "size_bytes": 8225,
+      "type": "json"
+    },
+    {
+      "encoding": "utf-8",
+      "file": "US_category_id.json",
+      "item_count": 32,
+      "items": [
+        {
+          "assignable": true,
+          "id": "1",
+          "title": "Film & Animation"
+        },
+        {
+          "assignable": true,
+          "id": "2",
+          "title": "Autos & Vehicles"
+        },
+        {
+          "assignable": true,
+          "id": "10",
+          "title": "Music"
+        },
+        {
+          "assignable": true,
+          "id": "15",
+          "title": "Pets & Animals"
+        },
+        {
+          "assignable": true,
+          "id": "17",
+          "title": "Sports"
+        },
+        {
+          "assignable": false,
+          "id": "18",
+          "title": "Short Movies"
+        },
+        {
+          "assignable": true,
+          "id": "19",
+          "title": "Travel & Events"
+        },
+        {
+          "assignable": true,
+          "id": "20",
+          "title": "Gaming"
+        },
+        {
+          "assignable": false,
+          "id": "21",
+          "title": "Videoblogging"
+        },
+        {
+          "assignable": true,
+          "id": "22",
+          "title": "People & Blogs"
+        },
+        {
+          "assignable": true,
+          "id": "23",
+          "title": "Comedy"
+        },
+        {
+          "assignable": true,
+          "id": "24",
+          "title": "Entertainment"
+        },
+        {
+          "assignable": true,
+          "id": "25",
+          "title": "News & Politics"
+        },
+        {
+          "assignable": true,
+          "id": "26",
+          "title": "Howto & Style"
+        },
+        {
+          "assignable": true,
+          "id": "27",
+          "title": "Education"
+        },
+        {
+          "assignable": true,
+          "id": "28",
+          "title": "Science & Technology"
+        },
+        {
+          "assignable": true,
+          "id": "29",
+          "title": "Nonprofits & Activism"
+        },
+        {
+          "assignable": false,
+          "id": "30",
+          "title": "Movies"
+        },
+        {
+          "assignable": false,
+          "id": "31",
+          "title": "Anime/Animation"
+        },
+        {
+          "assignable": false,
+          "id": "32",
+          "title": "Action/Adventure"
+        },
+        {
+          "assignable": false,
+          "id": "33",
+          "title": "Classics"
+        },
+        {
+          "assignable": false,
+          "id": "34",
+          "title": "Comedy"
+        },
+        {
+          "assignable": false,
+          "id": "35",
+          "title": "Documentary"
+        },
+        {
+          "assignable": false,
+          "id": "36",
+          "title": "Drama"
+        },
+        {
+          "assignable": false,
+          "id": "37",
+          "title": "Family"
+        },
+        {
+          "assignable": false,
+          "id": "38",
+          "title": "Foreign"
+        },
+        {
+          "assignable": false,
+          "id": "39",
+          "title": "Horror"
+        },
+        {
+          "assignable": false,
+          "id": "40",
+          "title": "Sci-Fi/Fantasy"
+        },
+        {
+          "assignable": false,
+          "id": "41",
+          "title": "Thriller"
+        },
+        {
+          "assignable": false,
+          "id": "42",
+          "title": "Shorts"
+        },
+        {
+          "assignable": false,
+          "id": "43",
+          "title": "Shows"
+        },
+        {
+          "assignable": false,
+          "id": "44",
+          "title": "Trailers"
+        }
+      ],
+      "sha256": "2e892c5a5e48d284e40fd37de0313912264041aef8833e5323bd2b2fd08c7e25",
+      "size_bytes": 8496,
+      "type": "json"
+    }
+  ],
+  "json": {
+    "extra": [],
+    "found": [
+      "CA_category_id.json",
+      "DE_category_id.json",
+      "FR_category_id.json",
+      "GB_category_id.json",
+      "IN_category_id.json",
+      "JP_category_id.json",
+      "KR_category_id.json",
+      "MX_category_id.json",
+      "RU_category_id.json",
+      "US_category_id.json"
+    ],
+    "missing": []
+  },
+  "raw_dir": "/home/ubuntu/youtube-trending-dbt/data/raw"
+}
