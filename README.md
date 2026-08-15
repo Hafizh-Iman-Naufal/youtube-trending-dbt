@@ -94,54 +94,7 @@ make docs               # generate dbt docs
 
 ## Architecture
 
-```mermaid
-flowchart LR
-  subgraph SRC["Source: Kaggle CSVs + JSONs"]
-    R1["raw_youtube_videos__<br/>10 region tables"]
-    R2["raw_youtube_categories__<br/>10 region tables"]
-    SD["seeds/region_metadata.csv"]
-  end
-
-  subgraph STG["Staging (views)"]
-    S1["stg_youtube_video_observations"]
-    S2["stg_youtube_categories"]
-  end
-
-  subgraph INT["Intermediate (views)"]
-    I1["int_video_observations_enriched"]
-    I2["int_video_lifecycle"]
-  end
-
-  subgraph CORE["Core (tables)"]
-    D1["dim_region"]
-    D2["dim_category"]
-    D3["dim_video"]
-    F1["fct_video_trending_daily"]
-  end
-
-  subgraph MARTS["Marts (tables)"]
-    M1["mart_video_lifecycle"]
-    M2["mart_channel_performance"]
-    M3["mart_category_performance"]
-    M4["mart_regional_trending"]
-  end
-
-  SD --> D1
-  R1 --> S1
-  R2 --> S2
-  S1 --> I1
-  S1 --> I2
-  S1 --> D3
-  S2 --> I1
-  I1 --> F1
-  I2 --> M1
-  D1 --> F1
-  D2 --> F1
-  D3 --> F1
-  F1 --> M2
-  F1 --> M3
-  F1 --> M4
-```
+![Data lineage — sources through marts](docs/assets/lineage.png)
 
 See `docs/lineage.md` for the generated `dbt docs` lineage graph.
 
